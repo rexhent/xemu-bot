@@ -6,9 +6,9 @@ import requests
 
 try:
     response = requests.get('https://reports.xemu.app/compatibility')
-    response.raise_for_status()  # Raise an exception for HTTP errors
+    response.raise_for_status()
 
-    data = response.json()  # Parse JSON from the response
+    data = response.json()
 
 except requests.exceptions.RequestException as e:
     print("Error making the request:", e)
